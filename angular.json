@@ -28,9 +28,44 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/vendor/perfect-scrollbar.css",
+              "src/assets/vendor/fix-footer.css",
+              "src/assets/css/dropzone.css",
+              "src/assets/css/material-icons.css",
+              "src/assets/css/fontawesome.css",
+              "src/assets/css/preloader.css",
+              "src/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css",
+              "src/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css",
+              "src/assets/css/app.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/jquery.min.js",
+              "src/assets/vendor/popper.min.js",
+              "src/assets/vendor/bootstrap.min.js",
+              "src/assets/vendor/vue.min.js",
+              "src/assets/vendor/dropzone.min.js",
+              "src/assets/vendor/perfect-scrollbar.min.js",
+              "src/assets/plugins/datatables/jquery.dataTables.js",
+              "src/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js",
+              "src/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js",
+              "src/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js",
+              "src/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.colVis.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.flash.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.html5.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.print.min.js",
+              "src/assets/vendor/toastr.min.js",
+              "src/assets/vendor/dom-factory.js",
+              "src/assets/vendor/material-design-kit.js",
+              "src/assets/vendor/fix-footer.js",
+              "src/assets/js/sweetalert.js",
+              "src/assets/js/sidebar.js",
+              "src/assets/js/theme-utils.js",
+              "src/assets/js/app.js",
+              "src/assets/js/vfs_fonts.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,74 @@
+<div class="container page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+  <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+      <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+          <h2 class="mb-0"> All Survey </h2>
+          <ol class="breadcrumb p-0 m-0">
+              <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+              <li class="breadcrumb-item"><a routerLink="/trainings"> Training </a></li>
+              <li class="breadcrumb-item active"> Survey </li>
+          </ol>
+      </div>
+  </div>
+</div>
+
+
+<div class="container page__container">
+  <div class="page-section">
+      <div class="page-separator">
+          <div class="page-separator__text">All Survey</div>
+      </div>
+      <div class="card mb-lg-32pt">
+          <div class="" data-toggle="lists">
+              <div class="">
+                  <table class="table mb-0 table thead-border-top-0 table-nowrap" datatable
+                       id="datatable">
+                      <thead>
+                          <tr>
+                              <th>Doctor Name</th>
+                              <th>Speciality</th>
+                              <th> From </th>
+                              <th> To </th>
+                              <th> Fees </th>
+                              <th class="text-center"> Action </th>
+                          </tr>
+                      </thead>
+                      <tbody class="list">
+                          <tr *ngFor="let survey of allSurveys; let i = index">
+                              <td><strong>{{survey?.surveyName | titlecase}}</strong> </td>
+                              <td> {{survey?.createdAt | date:'MMM dd yy' }}</td>
+                              <td> <strong>{{survey?.surveyType | uppercase}}</strong> </td>
+                              <td><strong>{{survey?.SurveyPages?.length | number}}</strong></td>
+                              <td>
+                                  <div class="d-flex flex-column">
+                                      <small
+                                          class="js-lists-values-status text-50 mb-4pt">{{survey?.isActive  ? 'Active' : 'Inactive'}}</small>
+                                      <span class="indicator-line rounded "
+                                          [ngClass]="{'bg-warning':!(survey?.isActive), 'bg-success':survey?.isActive}"></span>
+                                  </div>
+                              </td>
+
+                              <td class="text-center">
+                                  <div class="dropdown">
+                                      <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                              class="material-icons">more_horiz</i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a class="dropdown-item" (click)="navigate(i)">View Survey</a>
+                                          <a (click)="editSurvey(i)" class="dropdown-item" data-toggle="modal"
+                                              data-target="#addSurveyModal">Edit Survey</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a  class="dropdown-item"  routerLink="/surveypageadd">Create Survey Page</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a (click)="delete(i)" class="dropdown-item text-danger">Remove survey</a>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
