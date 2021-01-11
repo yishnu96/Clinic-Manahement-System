@@ -9,10 +9,15 @@ import { DataService } from '../data.service';
 })
 export class BookAppointmentComponent implements OnInit {
   paitentForm: FormGroup;
+  time: { time: string; available: string; }[];
+
   constructor(private data : DataService,private formBuilder: FormBuilder,) { }
 
   ngOnInit(): void {
     this.initCourseForm();
+    this.time = this.data.Ashishtime;
+    console.log(this.time);
+
   }
 
   initCourseForm() {

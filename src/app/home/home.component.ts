@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.dataService.clinic);
-    this.doctors = this.dataService.clinic['1'];
+    this.doctors = this.dataService.clinic;
   }
 
 }

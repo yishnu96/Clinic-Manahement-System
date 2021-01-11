@@ -13,20 +13,19 @@ export class DataService {
     { 'name': 'Vinita Tulsyan' , 'speciality': 'Gynecologist/obstetrician ', 'inTime' :  '11:00' , 'outTime': '15:00', 'cost' : '800'}
   ];
 
-  time = [
-    { 1 : [{time : '9:00' , available : 'true'},
+  Ashishtime =    [{time : '9:00' , available : 'true'},
             {time : '9:20' , available : 'true'},
             {time : '9:40' , available : 'true'},
             {time : '10:00' , available : 'true'},
             {time : '10:20' , available : 'true'},
             {time : '10:40' , available : 'true'},
             {time : '11:00' , available : 'true'}]
-    },
-    {2 : [ {time : '11:30' , available : 'true'},
+
+
+  Rahultime = [ {time : '11:30' , available : 'true'},
     {time : '11:50' , available : 'true'},
     {time : '12:10' , available : 'true'},
     {time : '12:30' , available : 'true'},
-   ]}
   ];
 
   Ashish: any[] = [];
@@ -36,5 +35,6 @@ export class DataService {
   addAppointment(id,obj){
     this.Ashish.push(obj);
   }
+
 
 }

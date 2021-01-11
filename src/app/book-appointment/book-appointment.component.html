@@ -14,16 +14,18 @@
         </div>
       </div>
       <div class="col-3">
-        <div class="form-group">
-          <label for="">Gender</label>
-          <input formControlName="paitentGender" type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
 
-        </div>
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Gender</label>
+        <select formControlName="paitentGender" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <option value="Male" > Male </option>
+          <option value="Female" > Female </option>
+          <option value="Other" > Other </option>
+        </select>
       </div>
       <div class="col-4">
         <label class="mr-sm-2" for="inlineFormCustomSelect">Choose time</label>
         <select formControlName="timeSlot" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-          <option value="11:00" > 11 : 00 </option>
+          <option *ngFor="let slot of time" value="{{slot.time}}"> {{slot.time}} </option>
         </select>
       </div>
     </div>

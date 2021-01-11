@@ -1,1 +1,34 @@
-<p>appointments works!</p>
+<div class="container page__container">
+  <div class="page-section">
+      <div class="card mb-lg-32pt">
+          <div class="" data-toggle="lists">
+              <div class="">
+                  <table class="table mb-0 table thead-border-top-0 table-nowrap" datatable
+                       id="datatable">
+                      <thead>
+                          <tr>
+                              <th>Patient Name</th>
+                              <th>Age </th>
+                              <th> Gender </th>
+                              <th> Time Slot </th>
+                          </tr>
+                      </thead>
+                      <tbody class="list">
+                          <tr *ngFor="let patient of Patients; let i = index">
+                              <td><strong>{{patient?.paitentName| titlecase}}</strong> </td>
+                              <td> {{patient?.paitentAge  }}</td>
+                              <td> {{patient?.paitentGender }} </td>
+                              <td><strong>{{patient?.timeSlot }}</strong></td>
+
+                              <td class="text-center">
+                                  <button type="button" routerLink="bookAppointment" class="btn btn-outline-primary"> BOOK APPOINTMENT</button>
+                                  <button type="button" routerLink="bookingHistory" class="btn btn-primary">Booking History </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
