@@ -1,0 +1,33 @@
+
+  <form class='form-horizantal' [formGroup]="paitentForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="">NAME </label>
+      <input formControlName="paitentName" type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+
+    </div>
+    <div class="form-group row">
+      <div class="col-3">
+        <div class="form-group">
+          <label for="">Age</label>
+          <input formControlName="paitentAge" type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="">Gender</label>
+          <input formControlName="paitentGender" type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+
+        </div>
+      </div>
+      <div class="col-4">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Choose time</label>
+        <select formControlName="timeSlot" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <option value="11:00" > 11 : 00 </option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
